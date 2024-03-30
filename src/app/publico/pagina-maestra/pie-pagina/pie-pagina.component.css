@@ -1,0 +1,35 @@
+/* Estilos generales del pie de página */
+.page-footer {
+    background-color: #2196F3; /* Mismo color azul */
+    color: #fff; /* Color del texto */
+    padding: 20px 0;
+  }
+  
+  /* Estilos para el contenido de la clase "container" dentro del pie de página */
+  .page-footer .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Estilos para el texto en el pie de página */
+  .page-footer h5 {
+    font-size: 18px;
+  }
+  
+  .page-footer p {
+    font-size: 14px;
+  }
+  
+  /* Estilos para los enlaces del pie de página */
+  .page-footer a {
+    color: #ccc; /* Color de los enlaces */
+  }
+  
+  /* Estilos específicos para la clase "footer-copyright" */
+  .footer-copyright {
+    background-color: #1565c0; /* Color azul más oscuro */
+    padding: 10px 0;
+  }
+  
+  

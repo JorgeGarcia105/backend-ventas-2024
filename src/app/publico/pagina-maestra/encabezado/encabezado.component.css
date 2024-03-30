@@ -1,0 +1,30 @@
+/* Estilos generales de la barra de navegación */
+nav.blue {
+    background-color: #2196F3; /* Cambia esto al color de fondo que desees */
+  }
+  
+  /* Estilos para el área de navegación dentro de la barra de navegación */
+  nav.blue .nav-wrapper {
+    padding: 0 20px;
+  }
+  
+  /* Estilos para el logo en la barra de navegación */
+  nav.blue .brand-logo {
+    font-size: 1.5rem; /* Tamaño del texto del logo */
+  }
+  
+  /* Estilos para la lista de elementos de navegación en la barra de navegación */
+  nav.blue ul.right li {
+    margin-left: 10px; /* Espacio entre elementos de la lista */
+  }
+  
+  /* Estilos para los enlaces en la lista de elementos de navegación */
+  nav.blue ul.right li a {
+    color: #fff; /* Color del texto de los enlaces */
+  }
+  
+  /* Estilos para los enlaces en la lista de elementos de navegación cuando se encuentran en dispositivos medianos y pequeños */
+  nav.blue ul#nav-mobile.right.hide-on-med-and-down li a {
+    color: #fff; /* Color del texto de los enlaces */
+  }
+  

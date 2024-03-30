@@ -1,0 +1,38 @@
+/* Estilos generales de la barra lateral */
+.sidenav {
+    width: 250px; /* Ancho de la barra lateral */
+    background-color: #fff; /* Color de fondo */
+  }
+  
+  /* Estilos para el fondo del perfil de usuario */
+  .user-view .background img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos para la imagen de perfil del usuario */
+  .user-view .circle {
+    width: 64px; /* Tamaño de la imagen */
+    height: 64px;
+  }
+  
+  /* Estilos para el nombre del usuario */
+  .user-view .name {
+    font-weight: bold;
+  }
+  
+  /* Estilos para el correo electrónico del usuario */
+  .user-view .email {
+    color: #888; /* Color del texto */
+  }
+  
+  /* Estilos para los enlaces en la barra lateral */
+  .sidenav li a {
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilos para el icono de menú */
+  .sidenav-trigger i {
+    color: #333; /* Color del icono */
+  }
+  
