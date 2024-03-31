@@ -30,7 +30,7 @@ export class EncabezadoComponent {
   sesionActiva: boolean = false;
 
   ngOnInit(): void {
-    
+    this.ValidarSesion();
   }
 
   ValidarSesion() {

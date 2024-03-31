@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductoModel } from '../../modelos/producto.model';
 
 @Component({
   selector: 'app-inicio',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class InicioComponent {
 
+  listaRegistros: ProductoModel[] = [];
+
+  constructor() { }
+
+  
 }

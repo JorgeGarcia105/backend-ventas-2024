@@ -1,0 +1,39 @@
+<div class="row">
+  <form [formGroup]="fGroup" class="col s12">
+    <div class="row">
+      <div class="input-field col s3">
+        <input formControlName="primerNombre" placeholder="Placeholder" id="primerNombre" type="text" class="validate">
+        <label for="primerNombre">Primer Nombre</label>
+      </div>
+      <div class="input-field col s3">
+        <input formControlName="segundoNombre" id="segundoNombre" type="text" class="validate">
+        <label for="segundoNombre">Segundo Nombre</label>
+      </div>
+      <div class="input-field col s3">
+        <input formControlName="primerApellido" placeholder="Placeholder" id="primerApellido" type="text" class="validate">
+        <label for="primerApellido">Primer Apellido</label>
+      </div>
+      <div class="input-field col s3">
+        <input formControlName="segundoApellido" id="segundoApellido" type="text" class="validate">
+        <label for="segundoApellido">Segundo Apellido</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s8">
+        <input formControlName="correo" id="email" type="email" class="validate" placeholder="placeholder"/>>
+        <label for="correo">Correo Eletrónico</label>
+      </div>
+      <div class="input-field col s8">
+        <input formControlName="telefono" id="telefono" type="text" class="validate"/>
+        <label for="telefono">Telefono Celular</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button class="btn waves-effect Waves-ligth" type="button" (click)="Registrarse()">Registarse</button>
+        <i class="material-icons rigth">Send</i>
+      </div>
+    </div>
+  </form>
+</div>
+      

@@ -55,8 +55,13 @@ export class IdentificacionTwofaComponent {
       this.servicioSeguridad.ValidarCodigo2FA(this.usuarioId, codigo2fa).subscribe({
         next: (datos: UsuarioValidadoModel) => {
           console.log(datos);
-          //this.servicioSeguridad.AlmacenarDatosUsuarioValidado(datos);
-          this.router.navigate(['/']);
+          if(datos.token != null && datos.token != '' && datos.token != undefined) {
+            this.servicioSeguridad.ConstruirMenuLateral(datos.menu);
+            this.servicioSeguridad.AlmacenarDatosUsuarioValidado(datos);
+            this.router.navigate([""]);
+          } else {
+            alert('Código 2FA incorrecto');
+          }
         },
         error: (err) => {
           console.log(err);

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SeguridadRoutingModule } from './seguridad-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SeguridadService } from '../../servicios/seguridad.service';
 
 
 @NgModule({
@@ -10,7 +11,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     SeguridadRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  ],
+  providers: [
+    SeguridadService
   ]
 })
 export class SeguridadModule { }

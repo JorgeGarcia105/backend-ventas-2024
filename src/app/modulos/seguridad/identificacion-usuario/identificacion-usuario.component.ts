@@ -1,6 +1,6 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { SeguridadService } from '../../../servicios/seguridad.service';
 import { UsuarioModel } from '../../../modelos/usuario.model';
 import { MD5 } from 'crypto-js';
