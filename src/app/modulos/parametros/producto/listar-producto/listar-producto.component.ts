@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { ProductoModel } from '../../../../modelos/producto.model';
-import { ParametrosService } from '../../../../servicios/parametros.service';
+import { ProductoService } from '../../../../servicios/parametros/producto.service';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ConfiguracionPaginacion } from '../../../../config/configuracion.paginacion';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-listar-producto',
   standalone: true,
   imports: [
-    RouterModule
+    RouterModule,
+    CommonModule,
+    NgxPaginationModule
   ],
   templateUrl: './listar-producto.component.html',
   styleUrl: './listar-producto.component.css'
@@ -15,15 +20,26 @@ import { RouterModule } from '@angular/router';
 export class ListarProductoComponent {
 
   listaRegistros:ProductoModel[] = [];
+  pag = 1;
+  total = 0;
+  registrosPorPagina = ConfiguracionPaginacion.registroPorPagina;  
 
   constructor(
-    private servicioParametros: ParametrosService
+    private servicio: ProductoService
   ) { }
 
   ngOnInit() {
-    this.servicioParametros.listarRegistros().subscribe({
+    this.ListarRegistros();
+  }
+
+  /**
+   * Listar registros
+   */
+  ListarRegistros() {
+    this.servicio.listarRegistrosPaginados(this.pag).subscribe({
       next: (datos) => {
-        this.listaRegistros = datos;
+          this.listaRegistros = datos.registros;
+          this.total = datos.totalRegistros;
       },
       error: (error) => {
         alert('Error leyendo la información de la base de datos');

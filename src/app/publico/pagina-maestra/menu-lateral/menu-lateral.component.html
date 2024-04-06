@@ -9,8 +9,10 @@
       <a href="#email"><span class="email">jdandtu&#64;gmail.com</span></a>
     </div>
   </li>
-  <li *ngIf="let m of listaMenus">
-    <a routerLink="{{ m.ruta }}">{{ m.texto }}</a>
+  <li>
+    <ng-container *ngFor="let m of listaMenus">
+      <a [routerLink]="m.ruta">{{ m.texto }}</a>
+    </ng-container>
   </li>
 </ul>
 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

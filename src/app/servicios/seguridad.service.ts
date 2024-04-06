@@ -214,4 +214,18 @@ export class SeguridadService {
     } 
     return menu;
   }
+
+  /**
+   * Obtiene el token del LocalStorage
+   * @returns token del LocalStorage
+   */
+  ObternerTokenLocalStorage(): string {
+    let ls = localStorage.getItem("datos-sesion");
+    if(ls) {
+      let usuario: UsuarioValidadoModel = JSON.parse(ls);
+      return usuario.token!;
+    } else {
+      return "";
+    }
+  }
 }

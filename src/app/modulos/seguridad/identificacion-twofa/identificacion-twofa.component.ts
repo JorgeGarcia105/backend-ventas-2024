@@ -3,13 +3,12 @@ import { SeguridadService } from '../../../servicios/seguridad.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioValidadoModel } from '../../../modelos/usuario.validado.model';
-
 @Component({
   selector: 'app-identificacion-twofa',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './identificacion-twofa.component.html',
   styleUrl: './identificacion-twofa.component.css'

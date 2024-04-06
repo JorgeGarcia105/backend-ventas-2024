@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 import { SeguridadService } from '../../../servicios/seguridad.service';
 import { ItemMenuModel } from '../../../modelos/item.menu.model';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 
 declare const iniciarMenuLateral: any;
 
@@ -14,7 +13,7 @@ declare const iniciarMenuLateral: any;
   imports: [
     ReactiveFormsModule,
     RouterModule,
-    HttpClientModule,
+    CommonModule
   ],
   templateUrl: './menu-lateral.component.html',
   styleUrl: './menu-lateral.component.css'
@@ -28,6 +27,6 @@ export class MenuLateralComponent {
 
   ngOnInit(): void {
     this.listaMenus = this.servicioSeguridad.ObtenerItemsMenuLateral();
-    iniciarMenuLateral();
+    //iniciarMenuLateral();
   }
 }

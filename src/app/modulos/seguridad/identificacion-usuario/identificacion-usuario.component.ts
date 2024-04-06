@@ -5,7 +5,7 @@ import { SeguridadService } from '../../../servicios/seguridad.service';
 import { UsuarioModel } from '../../../modelos/usuario.model';
 import { MD5 } from 'crypto-js';
 import { Router, RouterLink, RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-identificacion-usuario',
@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    SeguridadService
+    SeguridadService,
   ],
   templateUrl: './identificacion-usuario.component.html',
   styleUrl: './identificacion-usuario.component.css'

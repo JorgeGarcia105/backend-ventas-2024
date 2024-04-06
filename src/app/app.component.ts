@@ -3,9 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { PiePaginaComponent } from "./publico/pagina-maestra/pie-pagina/pie-pagina.component";
 import { EncabezadoComponent } from "./publico/pagina-maestra/encabezado/encabezado.component";
 import { MenuLateralComponent } from "./publico/pagina-maestra/menu-lateral/menu-lateral.component"
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SeguridadService } from './servicios/seguridad.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AuthInterceptor } from './interceptos/auth.intercepto';
+import { multicast } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -18,10 +21,12 @@ import { ReactiveFormsModule } from '@angular/forms';
       EncabezadoComponent,
       MenuLateralComponent,
       HttpClientModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      BrowserModule
     ],
     providers: [
-      SeguridadService
+      SeguridadService,
+      { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
     ]
 })
 export class AppComponent {

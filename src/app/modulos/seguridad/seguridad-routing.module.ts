@@ -11,37 +11,37 @@ import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.com
 import { ListarUsuarioComponent } from './usuario/listar-usuario/listar-usuario.component';
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
 import { EliminarUsuarioComponent } from './usuario/eliminar-usuario/eliminar-usuario.component';
-import { validarSesionActivaGuard, validarSesionInactivaGuard } from '../../guardianes/validar-sesion-activa.guard';
+import { validarSesionInactivaGuard } from '../../guardianes/validar-sesion-activa.guard';
 
 const routes: Routes = [
   {
     path: "identificar-usuario",
     component: IdentificacionUsuarioComponent,
-    canActivate: [validarSesionInactivaGuard]
+    //canActivate: [validarSesionInactivaGuard]
   },
   {
     path: "cambiar-clave",
     component: CambioClaveComponent,
-    canActivate: [validarSesionActivaGuard]
+    //canActivate: [validarSesionActivaGuard]
   }, {
     path: "recuperar-clave",
     component: RecuperarClaveComponent,
-    canActivate: [validarSesionInactivaGuard]
+    //canActivate: [validarSesionInactivaGuard]
   },
   {
     path: "cerrar-sesion",
     component: CerrarSesionComponent,
-    canActivate: [validarSesionActivaGuard]
+    //canActivate: [validarSesionActivaGuard]
   },
   {
     path: "2fa",
     component: IdentificacionTwofaComponent,
-    canActivate: [validarSesionInactivaGuard]
+    //canActivate: [validarSesionInactivaGuard]
   },
   {
     path: "registro-publico",
     component: ResgistroPublicoUsuariosComponent,
-    canActivate: [validarSesionInactivaGuard]
+    //canActivate: [validarSesionInactivaGuard]
   },
   {
     path: "validar-hash-usuario-publico/:hash",
@@ -50,22 +50,22 @@ const routes: Routes = [
   {
     path: "usuario-crear",
     component: CrearUsuarioComponent,
-    canActivate: [validarSesionActivaGuard]
+    //canActivate: [validarSesionActivaGuard]
   },
   {
     path: "usuario-listar",
     component: ListarUsuarioComponent,
-    canActivate: [validarSesionActivaGuard]
+    //canActivate: [validarSesionActivaGuard]
   },
   {
     path: "usuario-editar/:id",
     component: EditarUsuarioComponent,
-    canActivate: [validarSesionActivaGuard]
+    //canActivate: [validarSesionActivaGuard]
   },
   {
     path: "usuario-eliminar/:id",
     component: EliminarUsuarioComponent,
-    canActivate: [validarSesionActivaGuard]
+    //canActivate: [validarSesionActivaGuard]
   }
   /*{
     path: "rol-crear",

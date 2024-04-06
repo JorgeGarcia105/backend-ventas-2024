@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: "producto-editar/:id",
     component: EditarProductoComponent
+  },
+  {
+    path: "cliente/:id",
+    component: EditarProductoComponent
   }
 ];
 
