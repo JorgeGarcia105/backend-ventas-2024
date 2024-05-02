@@ -6,9 +6,7 @@ import { MenuLateralComponent } from "./publico/pagina-maestra/menu-lateral/menu
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SeguridadService } from './servicios/seguridad.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { AuthInterceptor } from './interceptos/auth.intercepto';
-import { multicast } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -21,8 +19,7 @@ import { multicast } from 'rxjs';
       EncabezadoComponent,
       MenuLateralComponent,
       HttpClientModule,
-      ReactiveFormsModule,
-      BrowserModule
+      ReactiveFormsModule
     ],
     providers: [
       SeguridadService,

@@ -18,7 +18,7 @@ export class SeguridadService {
   constructor( 
     private http: HttpClient
     ) { 
-    //this.validacionDeSesion();
+    this.validacionDeSesion();
   }
 
   /**
